@@ -5,7 +5,7 @@ def create_env(session):
     session.install("-r", "requirements.txt")
 
 @nox.session(python="3.11", reuse_venv=True)
-def remove_similar_frames(session):
+def similar_frames_remover(session):
     session.install("-r", "requirements.txt")
     session.run("python", "-m", "similar_frames_remover", *session.posargs)
 

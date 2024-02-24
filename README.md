@@ -9,13 +9,13 @@
 
 # Run
 ## with nox
-```nox -s remove_similar_frames -- -h``` to get help
+```nox -s similar_frames_remover -- -h``` to get help
 
-```nox -s remove_similar_frames -- {path to directory with images}``` to process the directory with images
+```nox -s similar_frames_remover -- {path to directory with images}``` to process the directory with images
 
 ## without nox
-```python -m remove_similar_frames -h``` to get help
-```python -m remove_similar_frames {path to directory with images}``` to process the directory with images
+```python -m similar_frames_remover -h``` to get help
+```python -m similar_frames_remover {path to directory with images}``` to process the directory with images
 
 # Lint
 ## with nox
