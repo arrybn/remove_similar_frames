@@ -1,7 +1,7 @@
 import logging
 import os
 from itertools import compress
-from typing import Callable, Dict, List, Tuple, Union
+from typing import Callable, List, Tuple, Union
 
 import numpy as np
 from sklearn.cluster import DBSCAN
@@ -47,7 +47,7 @@ def remove_subsequent_similar_frames(
     min_cnt_area_ratio: float,
     score_threshold: float,
 ) -> List[FrameAnnotation]:
-    logging.info(f"Remove subsequent similar frames")
+    logging.info("Remove subsequent similar frames")
     similarity_mask = [True]
 
     for prev_sample, next_sample in zip(img_seq, img_seq[1:]):
@@ -92,7 +92,7 @@ def remove_similar_frames_by_clustering(
     min_cnt_area_ratio: float,
     score_threshold: float,
 ) -> List[FrameAnnotation]:
-    logging.info(f"Removing similar frames by clustering")
+    logging.info("Removing similar frames by clustering")
 
     indices = np.asarray(list(range(len(img_seq)))).reshape((-1, 1))
 
