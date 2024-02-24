@@ -44,8 +44,6 @@ def preprocess_imgs(
         preprocessed_imgs = copy.deepcopy(imgs)
 
     gaussian_blur_ksize = get_gaussian_blur_ksize(imgs_shapes[0], gblur_half_size_ratio)
-    # if gblur_half_size_ratio is not None and gblur_half_size_ratio > 0.0:
-    # gaussian_blur_ksize = [max(2*int(.min()*gblur_half_size_ratio) + 1, 3)]
 
     preprocessed_imgs = [
         preprocess_image_change_detection(i, gaussian_blur_ksize)

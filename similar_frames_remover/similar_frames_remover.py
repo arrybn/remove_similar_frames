@@ -118,7 +118,7 @@ def remove_similar_frames_by_clustering(
         return similarity
 
     clustering = DBSCAN(eps=score_threshold, min_samples=1, metric=metric).fit(indices)
-
+    
     unique_images_annotation = list(dict(zip(clustering.labels_, img_seq)).values())
 
     logging.info(
